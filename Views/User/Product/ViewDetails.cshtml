@@ -1,0 +1,20 @@
+﻿@model Product
+
+@{
+    Layout = "~/Views/Shared/NewLayout.cshtml";
+
+
+
+<div class="card" style="width: 25rem;">
+    <div class="card-body">
+        <h5 class="card-title">Product Id: @Model?.ProductId</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Product Title: @Model?.Title</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Price:@Model?.Price.ToString("C")</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Description:@Model?.Description</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Product Quantity:@Model?.Quantity</h6>
+        <h6 class="card-subtitle mb-2 text-muted"><img src="@Model?.ImagePath" alt="@Model?.Title" class="img-fluid" /></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Department: @Model?.Category!.Name</h6>
+        <a href="~/Product/Index" class="btn btn-primary mt-3">Back</a>
+    </div>
+</div>
+}
